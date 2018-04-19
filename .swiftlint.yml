@@ -1,0 +1,19 @@
+disabled_rules:
+  - trailing_whitespace
+  - syntactic_sugar
+  - operator_whitespace
+  - todo
+  - control_statement
+  - redundant_optional_initialization
+included:
+  - ProbeSwiftCommon
+excluded:
+  - Pods
+
+force_try:
+  severity: warning
+
+type_name:
+  min_length: 2
+identifier_name:
+  min_length: 2
