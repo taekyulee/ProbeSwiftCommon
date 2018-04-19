@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "ProbeSwiftCommon"
   s.version      = "0.0.1"
+  s.swift_version = "4.0"
   s.summary      = "Common Swift Usage for Probe Technology"
 
   # This description is used to generate tags and improve search results.
@@ -79,8 +80,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/taekyulee/ProbeSwiftCommon.git", :tag => "#{s.version}" }
-
+  #s.source       = { :git => "https://github.com/taekyulee/ProbeSwiftCommon.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:taekyulee/ProbeSwiftCommon.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
