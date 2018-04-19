@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     func toNSDate() -> NSDate {
         return NSDate(timeIntervalSince1970: self.timeIntervalSince1970)
     }
