@@ -13,8 +13,19 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  lane :snapshot do
+  lane :private_repo do
     # add actions here: https://docs.fastlane.tools/actions
+
+    # version update
+    #spec = read_podspec(path: "./ProbeSwiftCommon.podspec")
+    #version = spec["version"]
+
+    # clean cache
+    clean_cocoapods_cache(name: "ProbeSwiftCommon")
+
+    # push to private repo
     pod_push(path: "ProbeSwiftCommon.podspec", repo: "ProbePrivate")
+    # If the podspec has a dependency on another private pod, then you will have to supply the sources you want the podspec to lint with for pod_push to succeed. Read more here - https://github.com/CocoaPods/CocoaPods/issues/2543.
+    #pod_push(path: "TMessages.podspec", repo: "MyRepo", sources: ["https://github.com/username/Specs", "https://github.com/CocoaPods/Specs"])
   end
 end
